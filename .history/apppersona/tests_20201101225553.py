@@ -30,11 +30,6 @@ class TestForms(SimpleTestCase):
         })
         self.assertTrue(form.is_valid())
 
-    def test_no_data(self):
-        form = FormularioPersona(data={})
-
-        self.assertFalse(form.is_valid())
-        self.assertEquals(len(form.errors), 6)
 
 # Create your tests here.
 
