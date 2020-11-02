@@ -22,7 +22,7 @@ class FormularioPersona(forms.ModelForm):
             'email': EmailInput(attrs={'rows': 1, 'cols': 30, 'style': 'resize:none;', 'id': 'email', 'class': "form-control", 'required onfocus': "setVisibility('102','inline')", 'onBlur': "setVisibility('102','none')", 'type': 'email',  'onkeyup':"sync()"}),
             'celular': Textarea(attrs={'rows': 1, 'cols': 30, 'style': 'resize:none;', 'id': 'celular', 'class': "form-control", 'required onfocus': "setVisibility('103','inline')", 'onBlur': "setVisibility('103','none')"}),
             'region': Select(attrs={'class': "form-control", 'onfocus': "setVisibility('105','inline')", 'onBlur': "setVisibility('105','none')", 'default': "rm"}),
-            'rut' : Textarea(attrs={'rows': 1, 'cols': 30, 'style': 'resize:none;', 'id': 'rut', 'class': 'form-control', 'required onfocus': "setVisibility('100','inline')", 'onBlur': "setVisibility('104','none')", })
+            'rut' : Textarea(attrs={'rows': 1, 'cols': 30, 'style': 'resize:none;', 'id': 'nombre', 'class': 'form-control', 'required onfocus': "setVisibility('100','inline')", 'onBlur': "setVisibility('104','none')",  'onkeyup':"sync()"})
           }
 
         labels = {
