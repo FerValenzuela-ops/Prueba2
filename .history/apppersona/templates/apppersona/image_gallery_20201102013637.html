@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <!-- WEA MALA QUE NO MUESTRA-->
+    {% for image in images %}
+      <img src="{{image.image.url}}" alt="{{image.name}}" style="width:150px;">
+      <p>{{image.title}}</p>
+    {% endfor %}
+
+<!-- BUENO-->
+    
+      
+      {% if img_obj %}
+        <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+        <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+      {% endif %}
+  </body>
+</html>
