@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contactanos | Conar</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="conar">
+  <link rel="shortcut icon" href="{% static 'img/logos/conaricon.ico' %}">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <!-- Google Fonts https://fonts.google.com/ -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--  Header -->
+  <header id="home">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+
+          <div class="d-none d-sm-block col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+            <a href="#">
+              <i class="fas fa-phone"></i>
+              <p>+569 1234 5678</p>
+            </a>
+          </div>
+
+          <div class="d-none d-md-block col-md-4 col-lg-3 col-xl-2 text-center">
+            <a href="mailto:conar2020@gmail.com">
+              <i class="fas fa-envelope"></i>
+              <p>conar2020@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="d-none d-lg-block col-lg-3 col-xl-5">
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="social-wrap mx-auto">
+              <ul class="social">
+                <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div> <!-- Fin Row -->
+      </div> <!-- Fin Container -->
+    </div> <!-- Fin Top Bar -->
+
+    <!--- Barra de navegacion -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+
+        <a class="navbar-brand" href="index"><img src="img/logos/conarlogo.png" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index">Inicio</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="nosotros" id="dropdown1" aria-haspopup="true"
+                aria-expanded="false">Nosotros</a>
+
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="registro">Únete</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="templates/apppersona/contacto.html">Contactanos</a>
+            </li>
+
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a> Eres {{ user.username }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/accounts/logout">Salir</a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="login">Ingresa</a>
+            </li>
+            {% endif %}
+
+          </ul>
+        </div> <!-- Fin del  Collapse -->
+
+      </div> <!-- Fin Container -->
+    </nav> <!-- Fin barra de navegacion -->
+
+  </header> <!-- Fin Header -->
+
+  <div class="toggle"></div> <!-- night mode -->
+
+  <!---  Fixed Background IMG -->
+  <div class="fixed-background">
+    <div class="row fixed-breadcrumbs text-light py-1 py-md-4">
+
+      <!---Comienzo de animacion  -->
+      <div class="container">
+        <div class="os-animation" data-animation="animate__animated animate__fadeInUp">
+          <div class="row text-center justify-content-center light-text">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <h1 class="font-weight-bold">Contacto</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- Fin Animacion -->
+
+    </div>
+    <!--- Fin Row Fixed -->
+
+    <div class="fixed-wrap">
+      <div id="fixed" class="bread contact">
+      </div>
+    </div>
+
+  </div>
+  <!--- Fin Fixed Background -->
+
+  <!--  BG Light -->
+  <div class="bg-light pb-5">
+
+    <!--- Contacto titulo -->
+    <div class="container py-4">
+      <div class="os-animation" data-animation="animate__animated animate__fadeInUp">
+        <div class="row text-center justify-content-center">
+
+          <div class="col-lg-10 col-xl-9">
+            <h1 class="text-dark">Contacta con nosotros</h1>
+            <div class="title-underline"></div>
+            <p class="lead">Escribenos un mensaje con tus preguntas o deseos!.</p>
+          </div>
+
+        </div> <!-- Fin Row -->
+      </div> <!-- Fin Animation -->
+    </div>
+    <!--- Fin Container -->
+  </div>
+  <hr class="mt-2 mb-5">
+
+  <!-- Formulario -->
+  <div class="container-fluid">
+    <div class="os-animation" data-animation="animate__animated animate__fadeInUp">
+      <div class="row mb-4">
+
+
+
+        <div class="col-md-7"></div>
+
+
+        <div class="responsive-wrapper" style="position: relative;">
+          <h2>Contactanos</h2>
+          <div id="error_message">
+
+          </div>
+          <form action="#" id="myform" onsubmit="return validate();">
+            {% block body_block %}
+            <div class="container">
+              <div class="jumbotron">
+                <h1>Login here :</h1>
+                <form method="post">
+                  {% csrf_token %}
+                  {# A more "HTML" way of creating the login form#}
+                  <label for="username">Username:</label>
+                  <input type="text" name="username" placeholder="Username"><label for="password">Password:</label>
+                  <input type="password" name="password" placeholder="Password"><input type="submit" name=""
+                    value="Login"></form>
+              </div>
+            </div>
+            {% endblock %}
+
+          </form>
+          <div class="col-md-5 contact-social">
+            <strong>Contactanos</strong>
+            <p>Nuestro personal estará feliz por recibir y contestar tus mensajes!</p>
+            <strong>Nuestra Locación</strong>
+            <p>Antonio Varas 666<br>Providencia, Santiago</p>
+            <strong>Información de contacto</strong>
+            <p><a class="blue-link" href="tel:+18885555555">569 1234 56789</a><br><a class="blue-link"
+                href="#">conar2020@gmail.com</a></p>
+            <ul class="contact social">
+              <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
+
+
+          </div>
+
+
+
+
+        </div>
+
+        <form></form>
+        <p><img src="{% static 'img/contacto/ratacontacto.png' %}" alt="#"
+            style="position: relative; top: 20%; right: -10%">
+        </p>
+
+        <!-- Fin Row -->
+      </div> <!-- Fin animacion -->
+
+    </div> <!-- Fin Container -->
+
+  </div> <!-- Fin BG Light -->
+
+
+  <!-- Comienzo Google Map -->
+  <div class="contact-map">
+    <div id="mapOverlay" class="responsive-map">
+      <iframe id=map
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.6248539919106!2d-70.61717578480106!3d-33.43302358077892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf7b8a17a02b%3A0x29d0f904a70a87b0!2sAntonio%20Varas%20666%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1600293402835!5m2!1sen!2scl"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+    </div>
+  </div> <!-- Fin Container -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row text-light pt-3 justify-content-between">
+
+        <div class="col-md-5 col-lg-3">
+          <img class="logo" src="{% static 'img/logos/conarlogo.png' %}" alt="Aqui va el logo xd">
+          <p>Somos una organización fundada en 2020 que tiene como objetivo principal resguardar la vida de
+            nuestros pequeños amigos roedores</p>
+          <div class="footer-social-wrap float-left pt-3">
+            <ul class="social">
+              <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+              </li>
+              <li><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></a>
+              </li>
+              <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-5 col-lg-2 mt-md-4 ml-md-2 social text-md-right text-lg-left">
+          <h5 class="pb-3">Enlaces Utiles</h5>
+          <div class="footer-links">
+            <p><a href="index"><i class="fas fa-home mr-3"></i>Inicio</a></p>
+            <p><a href="nosotros"><i class="fas fa-address-card mr-3"></i>Nosotros</a></p>
+            <p><a href="registro"><i class="fas fa-child mr-4"></i>Únete!</a></p>
+            <p><a href="contacto"><i class="fas fa-paper-plane mr-3"></i>Contactanos</a></p>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-5 col-lg-3 mt-md-4 text-md-right text-lg-left">
+          <h5 class="pb-3">Contactanos</h5>
+          <p class="text-uppercase">CONAR</p>
+          <p><i class="fas fa-map-marker-alt mr-2"></i>Antonio Varas 666 <br />
+            <span class="ml-4" style="position: relative; right: 5px;">Providencia, Santiago</span></p>
+          <p><i class="fas fa-phone mr-2"></i>+569 1234 56789</p>
+          <p><a href="mailto:conar2020@gmail.com"><i class="fas fa-envelope mr-2"></i>conar2020@gmail.com</a>
+          </p>
+        </div>
+
+      </div>
+      <!--- Fin Row -->
+    </div> <!-- Fin Container -->
+    <button class="btn btn-outline-dark btn-xs" id="parriba"><i class="fas fa-chevron-up"></i></button>
+  </footer>
+  <!--- Fin Footer -->
+
+  <!--  Socket -->
+  <div class="socket text-light text-center py-3">
+    <p class="">&copy; <a href="#" target="_blank">conar2020.com</a> CONAR.</p>
+  </div>
+  <!-- Fin Socket -->
+
+  <!--- Script usados  -->
+
+  <!-- jQuery -->
+  <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+  <!-- Bootstrap JS -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- Popper JS -->
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <!-- Font Awesome -->
+  <script src="{% static 'js/all.min.js' %}"></script>
+  <!-- Plugins JS -->
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <!-- Waypoints -->
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="{% static 'js/validate.js' %}"> </script>
+  <!-- Elevador -->
+  <script src="https://tholman.com/elevator.js/elevator.js/"></script>
+  <script src="{% static 'js/elevator.js' %}"></script>
+  <!-- night mode -->
+  <script src="{% static 'js/nightmode.js' %}"></script>
+  <!--- Fin Scripts usados -->
+
+
+
+</body>
+
+</html>

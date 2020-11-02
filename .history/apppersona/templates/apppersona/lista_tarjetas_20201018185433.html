@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Personas</title>
+</head>
+
+<body>
+    <h1>Lista de las tarjetas registradas</h1>
+    <ol> 
+    {% for tarjetaJuna in lista %} 
+        <li> rut : {{ tarjetaJuna.rut }} - numero {{ tarjetaJuna.numero }}
+
+        </li>
+    {% endfor %}
+    
+
+    </ol>
+</body>
+
+</html>
