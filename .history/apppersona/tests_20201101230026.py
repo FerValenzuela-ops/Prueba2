@@ -2,6 +2,7 @@ from django.http import response
 from django.test import TestCase, SimpleTestCase
 from django.shortcuts import reverse
 from .forms import FormularioPersona
+#from .validador_rut import validar_rut
 
 class TestUrls(SimpleTestCase):
     def test_inicio_code(self):
