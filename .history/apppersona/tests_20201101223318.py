@@ -21,10 +21,10 @@ class TestUrls(SimpleTestCase):
 class TestForms(SimpleTestCase):
     def test_form_valid_data(self):
         form = FormularioPersona(data={
-            'nombre': 'nombre1',
-            'apellido': 'apellido1',
-            'email': 'nombre@gmail.com',
-            'celular': 12345678,
+            'nombre': "nombre1",
+            'apellido': "apellido1",
+            'email': "nombre@gmail.com",
+            'celular': "12345678",
             'region': 'rm'
         })
         self.assertTrue(form.is_valid())

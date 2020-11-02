@@ -24,10 +24,11 @@ class TestForms(SimpleTestCase):
             'nombre': 'nombre1',
             'apellido': 'apellido1',
             'email': 'nombre@gmail.com',
-            'celular': 12345678,
-            'region': 'rm'
+            'celular': '12345678',
+            'region': ' '
         })
         self.assertTrue(form.is_valid())
 
+    
 # Create your tests here.
 

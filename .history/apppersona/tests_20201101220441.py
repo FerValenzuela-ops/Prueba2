@@ -23,11 +23,10 @@ class TestForms(SimpleTestCase):
         form = FormularioPersona(data={
             'nombre': 'nombre1',
             'apellido': 'apellido1',
-            'email': 'nombre@gmail.com',
-            'celular': 12345678,
-            'region': 'rm'
+            'celular': '12345678'
         })
         self.assertTrue(form.is_valid())
 
+    
 # Create your tests here.
 

@@ -22,12 +22,18 @@ class TestForms(SimpleTestCase):
     def test_form_valid_data(self):
         form = FormularioPersona(data={
             'nombre': 'nombre1',
-            'apellido': 'apellido1',
+            'apellido': 'apellido',
             'email': 'nombre@gmail.com',
-            'celular': 12345678,
-            'region': 'rm'
+            'celular': '12345678',
+            'region': 
         })
         self.assertTrue(form.is_valid())
+
+    def test_form_no_data(self):
+        form = FormularioPersona(data={})
+
+        self.assertFalse(form.is_valid())
+        self.assertEquals(len(form.erros), 5)
 
 # Create your tests here.
 
