@@ -25,7 +25,7 @@ class TestForms(SimpleTestCase):
             'apellido': 'apellido1',
             'email': 'nombre@gmail.com',
             'celular': '12345678',
-            'region': 'rm'
+            'region': 1
         })
         self.assertTrue(form.is_valid())
 
