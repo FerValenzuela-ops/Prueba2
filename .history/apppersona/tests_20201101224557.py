@@ -25,7 +25,7 @@ class TestForms(SimpleTestCase):
         form = FormularioPersona(data={})
 
         self.assertFalse(form.is_valid())
-        self.assertEquals(len(form.errors), 6)
+        self.assertEquals(len(form.errors), 4)
 
 # Create your tests here.
 
