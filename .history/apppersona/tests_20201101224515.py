@@ -19,7 +19,15 @@ class TestUrls(SimpleTestCase):
         self.assertTemplateUsed(response, 'apppersona/index.html')
 
 class TestForms(SimpleTestCase):
-
+    def test_form_valid_data(self):
+        form = FormularioPersona(data={
+            'nombre': 'nombre1',
+            'apellido': 'apellido1',
+            'email': 'nombre@gmail.com',
+            'celular': '12345678',
+            'region': 'rm'
+        })
+        self.assertTrue(form.is_valid())
     
     def test_no_data(self):
         form = FormularioPersona(data={})
