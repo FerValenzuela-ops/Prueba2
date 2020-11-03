@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galeria de Imagenes</title>
+  </head>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <body>
+    <!-- WEA MALA QUE NO MUESTRA-->
+
+   
+
+    
+   
+    <div class="container_img">
+        <h2 class="text-center">Galeria de Imagenes</h2>
+      
+        {% for image in images %}
+        <div class="lightbox-gallery">
+          <div><img src="{{image.image.url}}" alt="{{image.name}}" style="width:150px;"></div>
+          <p>{{image.title}}</p>
+          {% endfor %}
+        </div>  
+   
+    
+
+    </div>
+<!-- BUENO-->
+<div class="container">
+  <h2 class="text-center">Lightbox Gallery</h2>
+  <div class="lightbox-gallery">
+          <div><img src="http://placehold.it/300/f1b702/fff&text=image1" data-image-hd="http://placehold.it/600/f1b702/fff&text=image1" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, quae, quam. Ut dolorum quia, unde dicta at harum porro officia obcaecati ipsam deserunt fugit dolore delectus quam, maxime nisi quo."></div>
+          <div><img src="http://placehold.it/300/d2f1b2/222&text=image2" data-image-hd="http://placehold.it/600/d2f1b2/222&text=image2" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime accusamus officiis dignissimos doloribus consectetur harum eos sapiente optio aut minima."></div>
+          <div><img src="http://placehold.it/300/eee/000&text=image3" data-image-hd="http://placehold.it/600/eee/000&text=image3" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates veritatis similique, amet, maiores soluta recusandae cupiditate, sed perspiciatis fugit minima, sunt dolores cum earum deserunt illo ipsum!"></div>
+          <div><img src="http://placehold.it/300/222/fff&text=image4" data-image-hd="http://placehold.it/600/222/fff&text=image4" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque laudantium dignissimos tenetur eos unde quidem repellat officiis nemo laboriosam necessitatibus deleniti commodi quis aliquid est atque tempora aut, nihil!"></div>
+          <div><img src="http://placehold.it/300/b47f99/000&text=image5" data-image-hd="http://placehold.it/600/b47f99/000&text=image5" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto minus consequatur soluta quaerat itaque, laboriosam quis a facilis, cumque, deleniti quas aperiam voluptate dolore. Enim nostrum sit eaque, porro eligendi illo placeat?"></div>
+          <div><img src="http://placehold.it/300/e1d400/000&text=image6" data-image-hd="http://placehold.it/600/e1d400/000&text=image6" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi suscipit quam, id aliquam totam aperiam quas rem debitis voluptatem pariatur, illo accusamus facilis eius ipsa! Reprehenderit libero, quas iste repudiandae distinctio, quos dignissimos."></div>
+  </div>
+</div>
+
+  </body>
+</html>

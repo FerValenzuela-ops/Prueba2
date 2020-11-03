@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galeria de Imagenes</title>
+  </head>
+  <body>
+    <!-- WEA MALA QUE NO MUESTRA-->
+
+   
+
+    
+   
+    <div class="container_img">
+        <h2 class="text-center">Galeria de Imagenes</h2>
+      
+        {% for image in images %}
+        <div class="lightbox-gallery">
+          <div><img src="{{image.image.url}}" alt="{{image.name}}" style="width:150px;"></div>
+          <p>{{image.title}}</p>
+          {% endfor %}
+        </div>  
+   
+    
+
+    </div>
+<!-- BUENO-->
+    
+
+  </body>
+</html>

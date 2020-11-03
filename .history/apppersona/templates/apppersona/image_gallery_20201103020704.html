@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galeria de Imagenes</title>
+  </head>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  
+  
+  <body>
+
+    <!--Header -->
+    <header id="home">
+      <!-- Top Bar -->
+      <div class="top-bar">
+          <div class="container">
+              <div class="row">
+
+                  <div class="d-none d-sm-block col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                      <a href="#">
+                          <i class="fas fa-phone"></i>
+                          <p>+569 1234 5678</p>
+                      </a>
+                  </div>
+
+                  <div class="d-none d-md-block col-md-4 col-lg-3 col-xl-2 text-center">
+                      <a href="mailto:conar2020@gmail.com">
+                          <i class="fas fa-envelope"></i>
+                          <p>conar2020@gmail.com</p>
+                      </a>
+                  </div>
+
+                  <div class="d-none d-lg-block col-lg-3 col-xl-5">
+                  </div>
+
+                  <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                      <div class="social-wrap mx-auto">
+                          <ul class="social">
+                              <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                              <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                              <li><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                              <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                              <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+              </div> <!-- Fin Row -->
+          </div> <!-- Fin Container -->
+      </div> <!-- Fin Top Bar -->
+      
+      <!--- Barra de navegacion -->
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+
+  <a class="navbar-brand" href="index"><img src="{% static 'img/logos/conarlogo.png' %}" alt=""></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a class="nav-link active" href="index">Inicio</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="nosotros" id="dropdown1" aria-haspopup="true"
+          aria-expanded="false">Nosotros</a>
+
+      </li>
+
+      <!-- HAY QUE MODIFICAR EL CSS -->
+    
+      
+      
+
+
+
+      
+
+      {% if user.is_authenticated and request.user.is_superuser %}
+      
+      <li class="nav-item">
+        <a class="nav-link" href="admin">Administracion</a>
+      </li>
+      {% endif %}
+
+      
+
+
+      {% if user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="contacto" >Contactanos</a>
+        
+      </li>
+      <li class="nav-item">
+        <a> Eres {{ user.username }}</a>
+        
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="profile" >Mi perfil</a>
+        
+      </li>
+      
+
+      <li class="nav-item hide">
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/accounts/logout">Salir</a>
+      </li>
+
+      
+      
+      
+
+      {% else %}
+      
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="registro">Únete</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contacto">Contactanos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/accounts/login">Ingresa</a>
+      </li>
+      
+      {% endif %}
+
+    
+
+    </ul>
+  </div> <!-- Fin Collapse -->
+
+</div> <!-- Fin Container -->
+</nav> <!-- Fin barra de navegacion -->
+
+  </header> <!-- Fin Header -->
+  <div class="toggle"></div> <!-- night mode -->
+
+    <!-- WEA MALA QUE NO MUESTRA-->
+
+   
+
+    
+   
+    <div class="container_img">
+        <h2 class="text-center">Galeria de Imagenes</h2>
+      
+        {% for image in images %}
+        <div class="lightbox-gallery">
+          <div><img src="{{image.image.url}}" alt="{{image.name}}" style="width:150px;"></div>
+          <p>{{image.title}}</p>
+          {% endfor %}
+        </div>  
+   
+    
+
+    </div>
+<!-- BUENO-->
+
+  </body>
+</html>
+
+

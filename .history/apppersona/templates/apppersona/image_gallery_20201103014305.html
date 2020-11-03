@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galeria de Imagenes</title>
+  </head>
+  <body>
+    <!-- WEA MALA QUE NO MUESTRA-->
+
+   
+
+    
+   
+    <div class="form-group col-md-4">
+      <h2 class="text-center">Lightbox Gallery</h2>
+      
+        {% for image in images %}
+        <div class="form-group col-md-4">
+        <div><img src="{{image.image.url}}" alt="{{image.name}}" style="width:150px;"></div>
+        <p>{{image.title}}</p>
+        {% endfor %}
+    </div>  
+   
+    
+
+</div>
+<!-- BUENO-->
+    
+
+
+
+  </body>
+</html>

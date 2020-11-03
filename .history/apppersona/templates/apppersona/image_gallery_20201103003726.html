@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <!-- WEA MALA QUE NO MUESTRA-->
+
+   
+
+    
+   
+    <div class="gallery">
+        {% for image in images %}
+        <div class="form-group col-md-4">
+        <img src="{{image.image.url}}" alt="{{image.name}}" style="width:150px;">
+        <p>{{image.title}}</p>
+        {% endfor %}
+    </div>
+   
+
+    
+
+</div>
+<!-- BUENO-->
+    
+      
+
+  </body>
+</html>
