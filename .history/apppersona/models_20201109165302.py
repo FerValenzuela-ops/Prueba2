@@ -7,7 +7,7 @@ from django.db.models.fields import EmailField
 
 # Modelos
 
-# Regiones del combo box en el formulario
+# Regiones del combo box en al formulario
 REGIONES = (
 
     ('primera' ,'I Región de Tarapacá'),
@@ -34,7 +34,6 @@ class Image(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='images')
 
-    #Metodo que devuelve el titulo de la imagen
     def __str__(self):
         return self.title
 
@@ -50,7 +49,6 @@ class Persona(models.Model):
     region = models.CharField(max_length=6, choices=REGIONES, default='rm')
     edad = models.IntegerField(max_length=30 , default=0)
     
-    #Metodo que devuelve el nombre de la persona
     def __str__(self):
         return self.nombre
 
@@ -63,7 +61,6 @@ class Contactos(models.Model):
     email = models.EmailField(max_length=50)
     mensaje = models.TextField(max_length=50)
 
-    #Metodo que devuelve el nombre del contacto
     def __str__(self):
         return self.nombre
 

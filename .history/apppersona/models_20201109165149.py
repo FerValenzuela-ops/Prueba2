@@ -7,7 +7,7 @@ from django.db.models.fields import EmailField
 
 # Modelos
 
-# Regiones del combo box en el formulario
+# Regiones del combo box en al formulario
 REGIONES = (
 
     ('primera' ,'I Región de Tarapacá'),
@@ -28,19 +28,16 @@ REGIONES = (
     ('decimosexta','XVI Región de Ñuble')
 )
 
-#Clase Image para las imagenes de la galeria
+#Clase image para las imagenes de la galeria
 class Image(models.Model):
-    #Atributos de Image
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='images')
 
-    #Metodo que devuelve el titulo de la imagen
     def __str__(self):
         return self.title
 
 #Clase Persona
 class Persona(models.Model): 
-    #Atributos de Persona
     user = models.OneToOneField(User, on_delete=models.CASCADE, default='')
     nombre = models.TextField(max_length=30)
     apellido = models.TextField(max_length=30)
@@ -50,23 +47,19 @@ class Persona(models.Model):
     region = models.CharField(max_length=6, choices=REGIONES, default='rm')
     edad = models.IntegerField(max_length=30 , default=0)
     
-    #Metodo que devuelve el nombre de la persona
     def __str__(self):
         return self.nombre
 
 #Clase Contactos
 class Contactos(models.Model):
-    #Atributos de Contactos
     nombre = models.TextField(max_length=50)
     asunto = models.TextField(max_length=50)
     telefono = models.IntegerField(max_length=12)
     email = models.EmailField(max_length=50)
     mensaje = models.TextField(max_length=50)
 
-    #Metodo que devuelve el nombre del contacto
     def __str__(self):
         return self.nombre
-
 
 class TarjetaJunaeb(models.Model):
     numeroTarjeta = models.TextField(max_length=12) # es un identificador

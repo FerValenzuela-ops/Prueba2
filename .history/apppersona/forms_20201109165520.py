@@ -52,7 +52,7 @@ class FormularioPersona(forms.ModelForm): # Formulario para la clase persona
 
 class ExtendedUserCreationForm(UserCreationForm): # Formulario para la creacion del usuario
     
-    def __init__(self, *args, **kwargs): # Inicializador de la clase
+    def __init__(self, *args, **kwargs):
         super(ExtendedUserCreationForm, self).__init__(*args, **kwargs)
         self.fields['first_name'].widget = TextInput(attrs = {'class': 'form-control', 'id':'first_name', 'type':'hidden'})
         self.fields['last_name'].widget = TextInput(attrs = {'class': 'form-control', 'id':'last_name', 'type':'hidden'})

@@ -7,7 +7,7 @@ from django.db.models.fields import EmailField
 
 # Modelos
 
-# Regiones del combo box en el formulario
+# Regiones del combo box en al formulario
 REGIONES = (
 
     ('primera' ,'I Región de Tarapacá'),

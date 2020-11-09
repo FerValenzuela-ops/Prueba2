@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
-# Urls de cada html en el Templates para su redireccionamiento
+# Urls de cada html en el templates para su redireccionamiento
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('index', views.index, name = 'index'),
