@@ -31,8 +31,7 @@ class TestForms(SimpleTestCase):
             'email': 'nombre1@gmail.com',
             'celular': '12345678',
             'region': 'rm',
-            'rut': '123456789',
-            'edad': 22
+            'rut': '123456789'
         })
         self.assertTrue(form.is_valid())
 
